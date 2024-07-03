@@ -1,0 +1,29 @@
+---
+const { href, title, body } = Astro.props;
+---
+<a href={href} class="card">
+  <h2>{title} &rarr;</h2>
+  <p>{body}</p>
+</a>
+
+<style>
+  .card {
+    padding: 1.5rem;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    background-color: rgba(216, 182, 185, 0.7); /* 修改为半透明 */
+    transition: transform 0.3s;
+    text-decoration: none;
+    color: white;
+}
+
+  .card:hover {
+    transform: translateY(-5px);
+  }
+  .card h2 {
+    margin: 0 0 1rem;
+  }
+  .card p {
+    margin: 0;
+  }
+</style>

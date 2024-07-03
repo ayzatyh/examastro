@@ -1,0 +1,64 @@
+---
+import Layout from '../layouts/Layout.astro';
+import services from '../data/services.json';
+---
+<Layout title="生活服务">
+  <div class="services-page">
+    <div class="services-container">
+      <h1>生活服务</h1>
+      <section>
+        {services.map(service => (
+          <article class="service-article">
+            <h2>{service.name}</h2>
+            <p>{service.description}</p>
+          </article>
+        ))}
+      </section>
+    </div>
+  </div>
+</Layout>
+
+<style>
+  .services-page {
+    background: url('../../public/images/serviceback.jpg') no-repeat center center fixed; /* 替换为你的背景图片路径 */
+    background-size: cover;
+    min-height: 100vh; /* 确保背景覆盖整个视窗 */
+    padding: 2rem 0;
+  }
+
+  .services-container {
+    max-width: 1000px;
+    margin: auto;
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+
+  h1 {
+    text-align: center;
+    color: #2e7d32;
+  }
+
+  section {
+    margin-top: 2rem;
+  }
+
+  .service-article {
+    margin-bottom: 2rem;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.6); /* 进一步透明化背景 */
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  .service-article h2 {
+    margin-bottom: 0.5rem;
+    color: #388e3c;
+  }
+
+  .service-article p {
+    line-height: 1.6;
+    color: #555;
+  }
+</style>

@@ -1,0 +1,281 @@
+/* global.css */
+
+/* Reset some default browser styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Set a consistent font-family and line-height */
+ /* global.css */
+
+/* Reset some default browser styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Set a consistent font-family and line-height */
+  body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #2e7d32;
+    background: linear-gradient(120deg, #d4fc79, #96e6a1); /* 淡绿色波动背景 */
+    background-size: 200% 200%;
+    animation: gradient-animation 10s ease infinite;
+  }
+  
+  /* Homepage background */
+  .homepage-background {
+    background: url('/public/images/homepage-background.jpg') no-repeat center center fixed;
+    background-size: cover;
+    min-height: 100vh; /* 确保背景覆盖整个视窗 */
+  }
+  
+  @keyframes gradient-animation {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  
+  /* Other styles */
+  .card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    padding: 1rem;
+  }
+  
+  .hero {
+    text-align: center;
+    padding: 2rem 0;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 8px;
+    margin-bottom: 2rem;
+  }
+  
+  footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: rgba(76, 175, 80, 0.9);
+    color: white;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    font-size: 0.8rem;
+  }
+  
+  
+  /* Styling for the main container */
+  main {
+    margin: auto;
+    padding: 2rem;
+    max-width: 1200px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Styling for the header and navigation */
+  header {
+    text-align: center;
+    padding: 1rem;
+  }
+  
+  .navbar {
+    background-color: #4caf50;
+    padding: 1rem;
+    border-radius: 8px;
+  }
+  
+  nav ul {
+    display: flex;
+    list-style: none;
+    justify-content: space-around;
+    margin: 0;
+  }
+  
+  nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+  }
+  
+  nav a:hover {
+    background-color: #388e3c;
+  }
+  
+  /* Styling for footer */
+  footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: rgba(76, 175, 80, 0.9);
+    color: white;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    font-size: 0.8rem;
+  }
+  
+  /* Utility classes */
+  .text-center {
+    text-align: center;
+  }
+  
+  .text-gradient {
+    background-image: linear-gradient(45deg, #66bb6a, #388e3c);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  .card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    padding: 1rem;
+  }
+  
+  .card {
+    padding: 1.5rem;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    background-color: #ffffff;
+    transition: transform 0.3s;
+    text-decoration: none;
+    color: #2e7d32;
+  }
+  
+  .card:hover {
+    transform: translateY(-5px);
+    background-color: #a5d6a7;
+  }
+  
+  .card h2 {
+    margin: 0 0 1rem;
+  }
+  
+  .card p {
+    margin: 0;
+  }
+  
+  .instructions {
+    margin-bottom: 2rem;
+    border: 1px solid rgba(76, 175, 80, 0.25);
+    background: linear-gradient(rgba(76, 175, 80, 0.66), rgba(76, 175, 80, 0.33));
+    padding: 1.5rem;
+    border-radius: 8px;
+  }
+  
+  .instructions code {
+    font-size: 0.8em;
+    font-weight: bold;
+    background: rgba(76, 175, 80, 0.12);
+    color: #4caf50;
+    border-radius: 4px;
+    padding: 0.3em 0.4em;
+  }
+  
+  .instructions strong {
+    color: #4caf50;
+  }
+  
+  /* Styling for forms and inputs */
+  form {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  label {
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    color: #2e7d32;
+  }
+  
+  input,
+  textarea {
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+    width: 100%;
+    max-width: 400px;
+  }
+  
+  button {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 4px;
+    background-color: #4caf50;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #388e3c;
+  }
+  
+  /* New styles for the hero section and feature blocks */
+  .hero {
+    background: rgba(255, 255, 255, 0.8);
+    padding: 2rem;
+    text-align: center;
+    color: #2e7d32;
+    border-radius: 8px;
+  }
+  
+  .hero h1 {
+    font-size: 3rem;
+    font-family: 'Georgia', serif;
+    margin-bottom: 0.5rem;
+  }
+  
+  .hero p {
+    font-size: 1.5rem;
+    margin-top: 0.5rem;
+  }
+  
+  .features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0;
+  }
+  
+  .feature {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+  }
+  
+  .feature img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .feature-content {
+    padding: 1rem;
+  }
+  
+  .feature-content h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .feature-content p {
+    font-size: 1rem;
+  }
+  

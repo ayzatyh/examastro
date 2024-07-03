@@ -1,0 +1,56 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Card from '../components/Card.astro';
+import articles from '../data/articles.json';
+---
+<Layout title="环保信息与服务平台">
+  <div class="homepage-background">
+    <div class="hero">
+      <h1>欢迎来到环保信息与服务平台</h1>
+      <p>获取最新的环保资讯和实用的生活指南，保护我们的地球家园。</p>
+    </div>
+    <section>
+      <div class="card-grid">
+        {articles.map(article => (
+          <Card href={article.link} title={article.title} body={article.excerpt} />
+        ))}
+      </div>
+    </section>
+    <footer>
+      © 2024 环保信息与服务平台. All rights reserved.
+    </footer>
+  </div>
+</Layout>
+
+<style>
+  .homepage-background {
+    background: url('../../public/images/homepage-background.jpg') no-repeat center center fixed; /* 替换为你的背景图片路径 */
+    background-size: cover;
+    min-height: 100vh; /* 确保背景覆盖整个视窗 */
+  }
+
+  .card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .hero {
+    text-align: center;
+    padding: 2rem 0;
+    background: rgba(255, 255, 255, 0.6); /* 进一步透明化背景 */
+    border-radius: 8px;
+    margin-bottom: 2rem;
+  }
+
+  footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: rgba(76, 175, 80, 0.9);
+    color: white;
+    font-size: 0.8rem;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+  }
+</style>

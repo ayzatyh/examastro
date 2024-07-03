@@ -1,0 +1,117 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+<Layout title="联系我们">
+  <div class="contact-page">
+    <div class="contact-container">
+      <h1>联系我们</h1>
+      <p>如果您有任何问题或建议，请通过以下方式联系我们：</p>
+      <ul>
+        <li>邮箱：<a href="mailto:contact@enviroplatform.com">contact@enviroplatform.com</a></li>
+        <li>电话：123-456-7890</li>
+        <li>地址：某某市某某街道某某号</li>
+      </ul>
+      <p>我们期待您的来信，并将尽快回复您的咨询。</p>
+      <form action="/send-message" method="POST">
+        <label for="name">姓名:</label>
+        <input type="text" id="name" name="name" required>
+        
+        <label for="email">邮箱:</label>
+        <input type="email" id="email" name="email" required>
+        
+        <label for="message">信息:</label>
+        <textarea id="message" name="message" required></textarea>
+        
+        <button type="submit">发送</button>
+      </form>
+    </div>
+  </div>
+</Layout>
+
+<style>
+  .contact-page {
+    background: url('../../public/images/contactbac.jpg') no-repeat center center fixed; /* 替换为你的背景图片路径 */
+    background-size: cover;
+    min-height: 100vh; /* 确保背景覆盖整个视窗 */
+    padding: 2rem 0;
+  }
+
+  .contact-container {
+    max-width: 800px;
+    margin: auto;
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.8); /* 进一步透明化背景 */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+
+  h1 {
+    margin-bottom: 1rem;
+    font-size: 2.5rem;
+    color: #2e7d32;
+    text-align: center;
+  }
+  
+  p {
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+    color: #555;
+  }
+  
+  ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 1rem;
+  }
+  
+  ul li {
+    margin-bottom: 0.5rem;
+  }
+  
+  ul li a {
+    color: #4CAF50;
+    text-decoration: none;
+  }
+  
+  ul li a:hover {
+    text-decoration: underline;
+  }
+  
+  form {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  label {
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  input,
+  textarea {
+    margin-bottom: 1rem;
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+    width: 100%;
+    max-width: 100%;
+  }
+  
+  button {
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 4px;
+    background-color: #4CAF50;
+    color: white;
+    font-size: 1.1rem;
+    cursor: pointer;
+    align-self: flex-start;
+  }
+  
+  button:hover {
+    background-color: #45a049;
+  }
+</style>
